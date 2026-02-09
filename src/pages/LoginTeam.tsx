@@ -15,9 +15,9 @@ export const LoginTeam = () => {
                 <form onSubmit={(e) => { e.preventDefault(); window.location.href = '/team'; }}>
                     <div style={{ marginBottom: '1.5rem', textAlign: 'left' }}>
                         <Input
-                            label="Team Member Email"
-                            type="email"
-                            placeholder="name@leadboss.com"
+                            label="Username"
+                            type="text"
+                            placeholder="team"
                             required
                         />
                     </div>

@@ -15,9 +15,9 @@ export const LoginClient = () => {
                 <form onSubmit={(e) => { e.preventDefault(); window.location.href = '/dashboard'; }}>
                     <div style={{ marginBottom: '1.5rem', textAlign: 'left' }}>
                         <Input
-                            label="Client Email"
-                            type="email"
-                            placeholder="client@company.com"
+                            label="Username"
+                            type="text"
+                            placeholder="client"
                             required
                         />
                     </div>

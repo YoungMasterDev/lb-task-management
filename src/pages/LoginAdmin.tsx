@@ -15,9 +15,9 @@ export const LoginAdmin = () => {
                 <form onSubmit={(e) => { e.preventDefault(); window.location.href = '/admin'; }}>
                     <div style={{ marginBottom: '1.5rem', textAlign: 'left' }}>
                         <Input
-                            label="Admin Credentials"
-                            type="email"
-                            placeholder="admin@leadboss.com"
+                            label="Username"
+                            type="text"
+                            placeholder="admin"
                             required
                         />
                     </div>
