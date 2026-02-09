@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - LB Task Management</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="flex-center" style="background: #1A202C;">
+    <div class="glass-card login-container"
+        style="width: 100%; max-width: 400px; text-align: center; background: rgba(255, 255, 255, 0.9);">
+        <div style="margin-bottom: 2rem;">
+            <h1 style="color: #1A202C; margin-bottom: 0.5rem;">LB Admin</h1>
+            <p style="color: #4A5568;">System Administration</p>
+        </div>
+
+        <form action="admin.html">
+            <div style="margin-bottom: 1.5rem; text-align: left;">
+                <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Admin User</label>
+                <input type="email" id="email" class="input-field" placeholder="admin@leadboss.com" required
+                    style="background: white;">
+            </div>
+
+            <div style="margin-bottom: 2rem; text-align: left;">
+                <label for="password" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Secure
+                    Key</label>
+                <input type="password" id="password" class="input-field" placeholder="••••••••" required
+                    style="background: white;">
+            </div>
+
+            <button type="submit" class="btn btn-primary"
+                style="width: 100%; background: #2D3748;">Authenticaton</button>
+        </form>
+
+        <div style="margin-top: 2rem; font-size: 0.875rem; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 1rem;">
+            <p><a href="login_user.html">Return to Portal</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

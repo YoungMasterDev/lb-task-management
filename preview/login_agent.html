@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Login - LB Task Management</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="flex-center" style="background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);">
+    <div class="glass-card login-container"
+        style="width: 100%; max-width: 400px; text-align: center; border-top: 5px solid var(--color-accent);">
+        <div style="margin-bottom: 2rem;">
+            <h1 style="color: var(--color-hero-bg); margin-bottom: 0.5rem;">LB Agent</h1>
+            <p style="color: var(--color-text-light);">Support Team Portal</p>
+        </div>
+
+        <form action="agent.html">
+            <div style="margin-bottom: 1.5rem; text-align: left;">
+                <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Agent Email</label>
+                <input type="email" id="email" class="input-field" placeholder="agent@leadboss.com" required>
+            </div>
+
+            <div style="margin-bottom: 2rem; text-align: left;">
+                <label for="password" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Password</label>
+                <input type="password" id="password" class="input-field" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Access Dashboard</button>
+        </form>
+
+        <div style="margin-top: 2rem; font-size: 0.875rem; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 1rem;">
+            <p>Back to <a href="login_user.html">Client Login</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
