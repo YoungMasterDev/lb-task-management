@@ -7,7 +7,7 @@ export const AdminDashboard = () => {
             <aside style={{ background: '#1A202C', color: 'white', padding: '1.5rem' }}>
                 <div style={{ color: 'var(--color-accent)', fontSize: '1.5rem', fontWeight: 700, marginBottom: '3rem' }}>LB Admin</div>
                 <nav>
-                    {['Dashboard', 'User Management', 'Categories', 'System Settings'].map(item => (
+                    {['Dashboard', 'Client Management', 'Team Management', 'Categories', 'System Settings'].map(item => (
                         <div key={item} style={{ color: '#cbd5e0', padding: '0.75rem 0', borderBottom: '1px solid rgba(255,255,255,0.1)', cursor: 'pointer' }}>
                             {item}
                         </div>

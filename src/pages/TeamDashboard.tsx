@@ -2,12 +2,12 @@
 import { GlassCard } from '../components/Layout/GlassCard';
 import { Button } from '../components/UI/Button';
 
-export const AgentDashboard = () => {
+export const TeamDashboard = () => {
     return (
         <div style={{ display: 'flex', height: '100vh', overflow: 'hidden' }}>
             {/* Sidebar */}
             <aside style={{ width: '250px', height: '100vh', background: 'rgba(255, 255, 255, 0.9)', backdropFilter: 'blur(12px)', borderRight: '1px solid var(--glass-border)', display: 'flex', flexDirection: 'column', padding: '1.5rem' }}>
-                <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-accent)', marginBottom: '2rem' }}>LB Agent</div>
+                <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-accent)', marginBottom: '2rem' }}>LB Team</div>
                 <nav>
                     <div style={{ padding: '0.75rem 1rem', marginBottom: '0.5rem', borderRadius: 'var(--radius-sm)', background: 'rgba(247, 106, 12, 0.1)', color: 'var(--color-accent)', display: 'flex', alignItems: 'center' }}>
                         All Tickets <span style={{ marginLeft: 'auto', fontSize: '0.75rem', background: '#eee', padding: '2px 6px', borderRadius: '4px' }}>12</span>
@@ -61,7 +61,7 @@ export const AgentDashboard = () => {
                                     <p>I cannot log in to the CRM. The password reset link is not working either.</p>
                                 </div>
                                 <div style={{ maxWidth: '80%', padding: '1rem', borderRadius: 'var(--radius-md)', marginBottom: '1rem', alignSelf: 'flex-end', background: '#ebf8ff', color: 'var(--color-text-main)', border: '1px solid #bee3f8', marginLeft: 'auto' }}>
-                                    <strong>Support Agent</strong>
+                                    <strong>Team Member</strong>
                                     <p>Hello John, I'm looking into this. Can you confirm if you are seeing any specific error message?</p>
                                 </div>
                             </div>

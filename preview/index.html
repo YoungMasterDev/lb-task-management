@@ -4,37 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Login - LB Task Management</title>
+    <title>Client Login - LB Task Management</title>
     <link rel="stylesheet" href="./src/style.css">
 </head>
 
 <body class="flex-center">
     <div class="glass-card login-container" style="width: 100%; max-width: 400px; text-align: center;">
         <div style="margin-bottom: 2rem;">
-            <h1 style="color: var(--color-accent); margin-bottom: 0.5rem;">LB Tasks</h1>
+            <h1 style="color: var(--color-accent); margin-bottom: 0.5rem;">LB Client</h1>
             <p style="color: var(--color-text-light);">Client Portal Login</p>
         </div>
 
-        <form action="dashboard.html">
+        <form action="client_dashboard.html">
             <div style="margin-bottom: 1.5rem; text-align: left;">
-                <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email
-                    Address</label>
+                <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Client Email</label>
                 <input type="email" id="email" class="input-field" placeholder="client@company.com" required>
             </div>
 
             <div style="margin-bottom: 2rem; text-align: left;">
                 <label for="password" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Password</label>
                 <input type="password" id="password" class="input-field" placeholder="••••••••" required>
-                <div style="text-align: right; margin-top: 0.5rem;">
-                    <a href="#" style="font-size: 0.875rem;">Forgot password?</a>
-                </div>
             </div>
 
             <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In</button>
         </form>
 
         <div style="margin-top: 2rem; font-size: 0.875rem; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 1rem;">
-            <p>Not a client? <a href="login_agent.html">Agent Login</a> | <a href="login_admin.html">Admin Login</a></p>
+            <p>Are you part of the team? <a href="login_team.html">Team Login</a> | <a href="login_admin.html">Admin</a>
+            </p>
         </div>
     </div>
 </body>

@@ -10,7 +10,7 @@ const MOCK_TICKETS: Ticket[] = [
     { id: '1020', subject: 'Feature request: Dark mode', status: 'pending', lastUpdated: '3 days ago', customerName: 'John Doe', customerEmail: 'john@doe.com', priority: 'medium' },
 ];
 
-export const UserDashboard = () => {
+export const ClientDashboard = () => {
     return (
         <div className="container" style={{ paddingTop: '100px', paddingBottom: '2rem' }}>
             {/* Navbar Placeholder - In a real app, this would be in a Layout component */}
@@ -26,7 +26,7 @@ export const UserDashboard = () => {
 
             <div style={{ marginBottom: '3rem', display: 'flex', justifyContent: 'space-between', alignItems: 'end' }}>
                 <div>
-                    <h1 style={{ fontSize: '2.5rem' }}>Welcome back, User</h1>
+                    <h1 style={{ fontSize: '2.5rem' }}>Welcome back, Client</h1>
                     <p style={{ color: 'var(--color-text-light)', fontSize: '1.125rem' }}>Here is an overview of your support tickets.</p>
                 </div>
                 <Button>+ New Ticket</Button>
