@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard - LB Task Management (Preview)</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <style>
+        .admin-grid {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            background: #1A202C;
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .logo {
+            color: var(--color-accent);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+        }
+
+        .sidebar a {
+            color: #cbd5e0;
+            display: block;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar a:hover {
+            color: white;
+            padding-left: 0.5rem;
+        }
+
+        .main {
+            padding: 2rem;
+            background: #f7fafc;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--radius-sm);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-hero-bg);
+        }
+
+        .stat-label {
+            color: #718096;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="admin-grid">
+        <aside class="sidebar">
+            <div class="logo">LB Admin</div>
+            <nav>
+                <a href="#">Dashboard</a>
+                <a href="#">User Management</a>
+                <a href="index.html" style="margin-top: auto; color: #fc8181;">Logout</a>
+            </nav>
+        </aside>
+
+        <main class="main">
+            <h1 style="margin-bottom: 2rem;">Overview</h1>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">1,204</div>
+                    <div class="stat-label">Total Tickets</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color: var(--color-accent);">42</div>
+                    <div class="stat-label">Open Now</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">3.5h</div>
+                    <div class="stat-label">Avg Response Time</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">98%</div>
+                    <div class="stat-label">Satisfaction</div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

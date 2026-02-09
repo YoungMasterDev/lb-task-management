@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agent Dashboard - LB Task Management (Preview)</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border-right: 1px solid var(--glass-border);
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+        }
+
+        .sidebar-header {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            margin-bottom: 2rem;
+        }
+
+        .menu-item {
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: var(--radius-sm);
+            color: var(--color-text-main);
+            display: flex;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .menu-item:hover,
+        .menu-item.active {
+            background: rgba(247, 106, 12, 0.1);
+            color: var(--color-accent);
+        }
+
+        .agent-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: #f8fafc;
+        }
+
+        .top-bar {
+            height: 60px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1.5rem;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .split-view {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .ticket-list-panel {
+            width: 350px;
+            border-right: 1px solid rgba(0, 0, 0, 0.05);
+            overflow-y: auto;
+            background: white;
+        }
+
+        .ticket-item {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+
+        .ticket-item:hover {
+            background: #f7fafc;
+        }
+
+        .ticket-item.active {
+            background: #ebf8ff;
+            border-left: 3px solid var(--color-accent);
+        }
+
+        .detail-panel {
+            flex: 1;
+            padding: 1.5rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .conversation-bubble {
+            max-width: 80%;
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 1rem;
+        }
+
+        .bubble-user {
+            align-self: flex-start;
+            background: white;
+            border: 1px solid #e2e8f0;
+        }
+
+        .bubble-agent {
+            align-self: flex-end;
+            background: #ebf8ff;
+            color: var(--color-text-main);
+            border: 1px solid #bee3f8;
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">LB Agent</div>
+        <nav>
+            <a href="#" class="menu-item active">All Tickets <span
+                    style="margin-left: auto; font-size: 0.75rem; background: #eee; padding: 2px 6px; border-radius: 4px;">12</span></a>
+            <a href="#" class="menu-item">Open <span
+                    style="margin-left: auto; font-size: 0.75rem; background: #eee; padding: 2px 6px; border-radius: 4px;">5</span></a>
+            <a href="admin.html" class="menu-item">Go to Admin</a>
+        </nav>
+    </aside>
+
+    <div class="agent-main">
+        <header class="top-bar">
+            <h2 style="font-size: 1.125rem;">Dashboard</h2>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <input type="text" placeholder="Search tickets..."
+                    style="padding: 0.5rem; border-radius: 4px; border: 1px solid #e2e8f0;">
+            </div>
+        </header>
+
+        <div class="split-view">
+            <div class="ticket-list-panel">
+                <div class="ticket-item active">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                        <strong>Login issues with CRM</strong>
+                        <span style="font-size: 0.75rem; color: #718096;">2h</span>
+                    </div>
+                    <p style="font-size: 0.875rem; color: #4a5568;">User: john@doe.com</p>
+                    <span
+                        style="font-size: 0.75rem; background: #fed7d7; color: #c53030; padding: 2px 6px; border-radius: 4px;">High
+                        Priority</span>
+                </div>
+            </div>
+
+            <div class="detail-panel">
+                <div class="glass-card" style="flex: 1; display: flex; flex-direction: column;">
+                    <div style="border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem; margin-bottom: 1rem;">
+                        <h2 style="font-size: 1.5rem;">#1024 - Login issues with CRM</h2>
+                        <div style="display: flex; gap: 1rem; font-size: 0.875rem; color: #718096;">
+                            <span>Status: <strong style="color: #c53030;">Open</strong></span>
+                            <span>Created: Oct 24, 2023</span>
+                        </div>
+                    </div>
+
+                    <div style="flex: 1; overflow-y: auto;">
+                        <div class="conversation-bubble bubble-user">
+                            <strong>John Doe</strong>
+                            <p>I cannot log in to the CRM. The password reset link is not working either.</p>
+                        </div>
+                        <div class="conversation-bubble bubble-agent">
+                            <strong>Support Agent</strong>
+                            <p>Hello John, I'm looking into this. Can you confirm if you are seeing any specific error
+                                message?</p>
+                        </div>
+                    </div>
+
+                    <div style="border-top: 1px solid #e2e8f0; padding-top: 1rem; display: flex; gap: 1rem;">
+                        <textarea class="input-field" placeholder="Type your reply..."
+                            style="flex: 1; height: 80px; resize: none;"></textarea>
+                        <button class="btn btn-primary" style="align-self: flex-end;">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

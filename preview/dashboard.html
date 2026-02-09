@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - LB Task Management (Preview)</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <style>
+        /* Navbar Styles for Preview */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            color: var(--color-text-main);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--color-accent);
+        }
+
+        .main-content {
+            padding-top: 100px;
+            padding-bottom: 2rem;
+        }
+
+        .ticket-row {
+            display: grid;
+            grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: background 0.3s;
+        }
+
+        .ticket-row:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .status-pill {
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .status-open {
+            background: rgba(247, 106, 12, 0.1);
+            color: var(--color-accent);
+        }
+
+        .status-closed {
+            background: rgba(74, 85, 104, 0.1);
+            color: var(--color-text-light);
+        }
+
+        .status-pending {
+            background: rgba(236, 201, 75, 0.2);
+            color: #d69e2e;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div style="font-family: var(--font-heading); font-weight: 700; font-size: 1.5rem; color: var(--color-accent);">
+            LB Tasks
+        </div>
+        <div class="nav-links">
+            <a href="dashboard.html" class="active">Home</a>
+            <a href="#">My Tickets</a>
+            <a href="#">Profile</a>
+            <a href="index.html">Logout</a>
+        </div>
+    </nav>
+
+    <main class="container main-content">
+        <div style="margin-bottom: 3rem; display: flex; justify-content: space-between; align-items: end;">
+            <div>
+                <h1 style="font-size: 2.5rem;">Welcome back, User</h1>
+                <p style="color: var(--color-text-light); font-size: 1.125rem;">Here is an overview of your support
+                    tickets.</p>
+            </div>
+            <button class="btn btn-primary">+ New Ticket</button>
+        </div>
+
+        <div class="glass-card" style="padding: 0;">
+            <div class="ticket-row"
+                style="background: rgba(0,0,0,0.02); font-weight: 600; border-bottom: 1px solid var(--glass-border);">
+                <span>ID</span>
+                <span>Subject</span>
+                <span>Status</span>
+                <span>Last Updated</span>
+                <span>Action</span>
+            </div>
+
+            <div class="ticket-row">
+                <span style="font-family: monospace;">#1024</span>
+                <span style="font-weight: 500;">Login issues with CRM</span>
+                <span><span class="status-pill status-open">Open</span></span>
+                <span style="color: var(--color-text-light);">2 hours ago</span>
+                <a href="agent.html" class="btn btn-secondary"
+                    style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">View</a>
+            </div>
+
+            <div class="ticket-row">
+                <span style="font-family: monospace;">#1023</span>
+                <span style="font-weight: 500;">Update billing information</span>
+                <span><span class="status-pill status-closed">Closed</span></span>
+                <span style="color: var(--color-text-light);">Yesterday</span>
+                <a href="#" class="btn btn-secondary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">View</a>
+            </div>
+
+            <div class="ticket-row" style="border-bottom: none;">
+                <span style="font-family: monospace;">#1020</span>
+                <span style="font-weight: 500;">Feature request: Dark mode</span>
+                <span><span class="status-pill status-pending">Pending</span></span>
+                <span style="color: var(--color-text-light);">3 days ago</span>
+                <a href="#" class="btn btn-secondary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">View</a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
