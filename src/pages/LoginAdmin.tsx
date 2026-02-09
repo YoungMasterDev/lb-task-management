@@ -32,6 +32,11 @@ export const LoginAdmin = () => {
                     </div>
 
                     <Button type="submit" style={{ width: '100%', background: '#1A202C', borderColor: '#1A202C' }}>System Authenticate</Button>
+
+                    <div style={{ marginTop: '1rem', padding: '0.75rem', background: 'rgba(26, 32, 44, 0.05)', border: '1px dashed #1A202C', borderRadius: 'var(--radius-sm)', fontSize: '0.85rem' }}>
+                        <strong>Demo Login:</strong><br />
+                        User: <span style={{ fontFamily: 'monospace' }}>admin</span> | Pass: <span style={{ fontFamily: 'monospace' }}>1234</span>
+                    </div>
                 </form>
 
                 <div style={{ marginTop: '2rem', fontSize: '0.875rem' }}>

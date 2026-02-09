@@ -32,6 +32,11 @@ export const LoginClient = () => {
                     </div>
 
                     <Button type="submit" style={{ width: '100%' }}>Sign In</Button>
+
+                    <div style={{ marginTop: '1rem', padding: '0.75rem', background: 'rgba(247, 106, 12, 0.05)', border: '1px dashed var(--color-accent)', borderRadius: 'var(--radius-sm)', fontSize: '0.85rem' }}>
+                        <strong>Demo Login:</strong><br />
+                        User: <span style={{ fontFamily: 'monospace' }}>client</span> | Pass: <span style={{ fontFamily: 'monospace' }}>1234</span>
+                    </div>
                 </form>
 
                 <div style={{ marginTop: '2rem', fontSize: '0.875rem' }}>

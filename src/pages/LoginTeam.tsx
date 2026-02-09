@@ -32,6 +32,11 @@ export const LoginTeam = () => {
                     </div>
 
                     <Button type="submit" style={{ width: '100%', background: '#2d3436', borderColor: '#2d3436' }}>Login to Team Portal</Button>
+
+                    <div style={{ marginTop: '1rem', padding: '0.75rem', background: 'rgba(45, 52, 54, 0.05)', border: '1px dashed #2d3436', borderRadius: 'var(--radius-sm)', fontSize: '0.85rem' }}>
+                        <strong>Demo Login:</strong><br />
+                        User: <span style={{ fontFamily: 'monospace' }}>team</span> | Pass: <span style={{ fontFamily: 'monospace' }}>1234</span>
+                    </div>
                 </form>
 
                 <div style={{ marginTop: '2rem', fontSize: '0.875rem' }}>
