@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { LoginClient } from './pages/LoginClient';
 import { LoginTeam } from './pages/LoginTeam';
 import { LoginAdmin } from './pages/LoginAdmin';
