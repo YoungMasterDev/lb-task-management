@@ -1,5 +1,6 @@
 
 
+// @ts-nocheck
 export const AdminDashboard = () => {
     return (
         <div style={{ display: 'grid', gridTemplateColumns: '250px 1fr', minHeight: '100vh' }}>

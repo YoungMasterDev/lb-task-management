@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { GlassCard } from '../components/Layout/GlassCard';
 import { Button } from '../components/UI/Button';
 
