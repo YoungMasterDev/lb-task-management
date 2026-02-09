@@ -1,4 +1,3 @@
-import React from 'react';
 import { TicketStatus } from '../../types';
 
 export const StatusPill = ({ status }: { status: TicketStatus }) => {

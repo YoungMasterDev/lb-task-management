@@ -1,12 +1,12 @@
-import React from 'react';
+import { ButtonHTMLAttributes, ReactNode, CSSProperties } from 'react';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: 'primary' | 'secondary' | 'ghost';
-    children: React.ReactNode;
+    children: ReactNode;
 }
 
 export const Button = ({ variant = 'primary', className = '', children, ...props }: ButtonProps) => {
-    const baseStyles: React.CSSProperties = {
+    const baseStyles: CSSProperties = {
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',

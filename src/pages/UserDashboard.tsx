@@ -1,4 +1,3 @@
-import React from 'react';
 import { GlassCard } from '../components/Layout/GlassCard';
 import { Button } from '../components/UI/Button';
 import { StatusPill } from '../components/UI/StatusPill';

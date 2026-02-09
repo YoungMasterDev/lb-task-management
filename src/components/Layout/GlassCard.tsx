@@ -1,9 +1,9 @@
-import React from 'react';
+import { ReactNode, CSSProperties } from 'react';
 
 interface GlassCardProps {
-    children: React.ReactNode;
+    children: ReactNode;
     className?: string;
-    style?: React.CSSProperties;
+    style?: CSSProperties;
 }
 
 export const GlassCard = ({ children, className = '', style }: GlassCardProps) => {
